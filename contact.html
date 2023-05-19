@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Smooch&family=Titan+One&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&family=Sriracha&family=Titan+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6b6137a28b.js" crossorigin="anonymous"></script>    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            background-color:rgba(244, 248, 251, 0.638);
+        }
+        h1{
+            text-align:center;
+            font-size:70px;
+        }
+        p{
+            text-align:center;
+            font-size:30px;
+        }
+        form{
+            padding-top:20px;
+            width:1200px;
+            height:auto;
+            text-align:justify;
+            margin-left:150px;
+            margin-right:150px;
+        }
+        fieldset{
+            border-radius:5px;
+            border: 5px black solid;
+        }
+        input{
+            border-radius:10px;
+            border: 3px black solid;
+            padding:5px;
+        }
+        header{
+            width:100%;
+            height:200px;  
+            font-family: 'Smooch', cursive;       
+            margin-left:-21px;
+        }
+        body{
+            height: 1500px;
+        }
+        textarea{
+            margin-top:10px;
+            height:120px;
+            width:50%;
+        }
+        nav{
+        border:5px;
+        border-style: none none solid none;
+        }
+        #Company{
+        font-size: 60px;
+        text-align:center;
+        padding-top:30px;
+      }
+      #title{
+        height:140px;
+        background-color: rgba(244, 248, 251, 0.638);
+        margin-bottom:0px;
+        border:2px;
+        border-style: none none groove none;
+        font-family: 'Smooch', cursive; 
+      }
+    </style>
+</head>
+
+<div id="title"><h1 id="Company">The Shoebox</h1></div>
+<body>
+    <!--Bootsrtrap NAV Bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Explore</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+                  <li><a class="dropdown-item" href="#">High-Tops</a></li>
+                  <li><a class="dropdown-item" href="#">Platform Shoes</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="About.html">About us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <ul>
+    <form id="form">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" placeholder="Jodi" pattern="\D+" >        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" placeholder="Hunter" pattern="\D+" ><br><br>
+        <label for="ph">Phone Number:</label>
+        <input type="tel" id="ph" name="phone" placeholder="Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+        <label for="em">Email:</label>
+        <input type="email" id="em" name="email" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" placeholder="Email@example.com" ><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Shopping expirience</legend>
+
+        <label for="quant">How was your expirience?(on a scale of 0-10, 0 being the horrible, 10 being the best)</label>
+        <input type="range" name="cqaunt" min="1" max="10" step="1" oninput="this.nextElementSibling.value = this.value" >
+        <output>5</output><br>
+
+        <br>
+        <label for="cflavor">Reason for contact</label>
+        <input type="text" id="cflavor" name="flavor" list="flavors" placeholder="Choose option">
+        <datalist id="flavors">
+            <option value="Return"></option>
+            <option value="Complaint"></option>
+            <option value="Delivery issue"></option>
+            <option value="Exchange"></option>
+            <option value="Question"></option>
+            <option value="Help"></option>
+        </datalist><br>
+
+        <br>
+        <label for="Other">In a brief summary tell us you are reaching out.</label><br>
+        <textarea name="Person" id="Other" placeholder="Enter text"></textarea><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Payment information</legend>
+        For refund purposes only<br>
+        <label for="pay">Payment type:</label><br>
+        <input type="radio" id="pay" name="pay"><i class="fa-brands fa-paypal" ></i><br>
+        <input type="radio" id="pay" name="pay"><i class="fa-brands fa-cc-mastercard"></i><br>
+        <input type="radio" id="pay" name="pay"><i class="fa-brands fa-cc-discover"></i></i><br>        
+        <input type="radio" id="pay" name="pay"><i class="fa-brands fa-cc-amex"></i><br>
+        <input type="radio" id="pay" name="pay"><i class="fa-brands fa-cc-visa"></i></i><br>
+
+        <label for="card">Credit card number:</label>
+        <input type="text" id="card" name="Payment" pattern="^\d{16}" placeholder="0000 0000 0000 0000" >
+
+        <label for="card">CVC:</label>
+        <input type="text" id="card" name="Payment" pattern="^\d{3}" placeholder="000" > 
+        <label for="card">Expiration Date:</label>
+
+        <input type="date" id="card" name="Payment"><br><br>
+        <input type="submit" value="Submit">
+
+    </fieldset>
+    </form>
+
+ <!-- FOOTER -->
+ <footer class="w-100 py-4 flex-shrink-0">
+    <div class="container py-4">
+        <div class="row gy-4 gx-5">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="h1 text-white">FB.</h5>
+                <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="text-white mb-3">Quick links</h5>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Get started</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="text-white mb-3">Quick links</h5>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Get started</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="text-white mb-3">Newsletter</h5>
+                <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+</body>
+</html>
